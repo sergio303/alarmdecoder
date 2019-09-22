@@ -177,7 +177,7 @@ class Zonetracker(object):
                 self._last_zone_fault = 0
 
             # Process fault
-            elif self.alarmdecoder_object.mode != DSC and (message.check_zone or message.text.startswith("FAULT") or message.text.startswith("ALARM")):
+            elif self.alarmdecoder_object.mode != DSC and (message.check_zone or message.text.startswith("FALLO") or message.text.startswith("ALARMA")):
                 zone = message.parse_numeric_code()
 
                 # NOTE: Odd case for ECP failures.  Apparently they report as
